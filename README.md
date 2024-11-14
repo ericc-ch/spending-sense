@@ -1,6 +1,47 @@
-# Nuxt Minimal Starter
+# SpendingSense - Personal Finance Tracker
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+SpendingSense is a modern, user-friendly personal finance tracking application built with Nuxt.js that helps users manage their expenses and maintain better control over their financial habits.
+
+## Features
+
+### Core Functionality
+- **Expense Logging**
+  - Add and categorize daily expenses
+  - Add notes and descriptions to transactions
+  - Edit or delete existing entries
+
+- **Visual Analytics**
+  - Pie charts showing expense distribution by category
+  - Bar graphs for monthly spending trends
+  - Interactive data visualization
+
+- **Budget Management**
+  - Set monthly budget limits by category
+  - Receive alerts when approaching budget limits
+  - Track remaining budget in real-time
+
+### Technical Features
+- **Data Privacy & Security**
+  - All data stored locally in browser storage
+  - No external server dependencies
+  - Optional data export/backup functionality
+
+- **Modern UI/UX**
+  - Responsive design for all devices
+  - Intuitive user interface
+  - Dark/Light theme support
+
+### Premium Features (Future)
+- Advanced analytics and reporting
+- Custom categories and tags
+- Premium themes and customization options
+
+## Technical Stack
+- **Frontend**: Nuxt.js 3
+- **UI Framework**: (TBD - Tailwind CSS/Vuetify)
+- **State Management**: Nuxt State Management
+- **Data Storage**: Browser LocalStorage/IndexedDB
+- **Charts**: (TBD - Chart.js/D3.js)
 
 ## Setup
 
