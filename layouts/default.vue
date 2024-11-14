@@ -9,6 +9,10 @@
               <span class="ml-2 text-xl font-bold text-gray-900">SpendingSense</span>
             </NuxtLink>
           </div>
+          <div class="flex items-center">
+            <NuxtLink to="/" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</NuxtLink>
+            <NuxtLink to="/analytics" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Analytics</NuxtLink>
+          </div>
         </div>
       </nav>
     </header>
