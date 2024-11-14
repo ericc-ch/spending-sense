@@ -1,10 +1,10 @@
 <template>
-  <form @submit.prevent="handleSubmit" class="space-y-6">
+  <form @submit.prevent="handleSubmit" class="space-y-6 p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg transition-colors duration-200">
     <div>
-      <label for="amount" class="form-label">Amount ($)</label>
+      <label for="amount" class="block text-sm font-medium text-gray-700 dark:text-gray-200">Amount ($)</label>
       <div class="mt-1 relative rounded-md shadow-sm">
         <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-          <span class="text-gray-500 sm:text-sm">$</span>
+          <span class="text-gray-500 dark:text-gray-400 sm:text-sm">$</span>
         </div>
         <input
           id="amount"
@@ -13,19 +13,19 @@
           step="0.01"
           min="0"
           required
-          class="input-field pl-7"
+          class="block w-full pl-7 pr-12 sm:text-sm border-gray-300 dark:border-gray-600 rounded-md focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:text-white transition-colors duration-200"
           placeholder="0.00"
         />
       </div>
     </div>
 
     <div>
-      <label for="category" class="form-label">Category</label>
+      <label for="category" class="block text-sm font-medium text-gray-700 dark:text-gray-200">Category</label>
       <select
         id="category"
         v-model="form.category"
         required
-        class="input-field"
+        class="block w-full mt-1 pl-3 pr-10 py-2 text-base border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-primary-500 focus:border-primary-500 sm:text-sm rounded-md dark:bg-gray-700 dark:text-white transition-colors duration-200"
       >
         <option value="" disabled>Select a category</option>
         <option v-for="category in DEFAULT_CATEGORIES" :key="category" :value="category">
@@ -35,32 +35,32 @@
     </div>
 
     <div>
-      <label for="description" class="form-label">Description</label>
+      <label for="description" class="block text-sm font-medium text-gray-700 dark:text-gray-200">Description</label>
       <input
         id="description"
         v-model="form.description"
         type="text"
         required
-        class="input-field"
+        class="block w-full mt-1 pl-3 pr-10 py-2 text-base border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-primary-500 focus:border-primary-500 sm:text-sm rounded-md dark:bg-gray-700 dark:text-white transition-colors duration-200"
         placeholder="Enter expense description"
       />
     </div>
 
     <div>
-      <label for="date" class="form-label">Date</label>
+      <label for="date" class="block text-sm font-medium text-gray-700 dark:text-gray-200">Date</label>
       <input
         id="date"
         v-model="form.date"
         type="date"
         required
-        class="input-field"
+        class="block w-full mt-1 pl-3 pr-10 py-2 text-base border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-primary-500 focus:border-primary-500 sm:text-sm rounded-md dark:bg-gray-700 dark:text-white transition-colors duration-200"
       />
     </div>
 
     <div class="flex gap-4">
       <button
         type="submit"
-        class="flex-1 btn btn-primary"
+        class="flex-1 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 dark:focus:ring-offset-gray-800 transition-colors duration-200"
       >
         {{ expense ? 'Update' : 'Add' }} Expense
       </button>
@@ -69,7 +69,7 @@
         v-if="expense"
         type="button"
         @click="resetForm"
-        class="btn btn-secondary"
+        class="inline-flex justify-center py-2 px-4 border border-gray-300 dark:border-gray-600 shadow-sm text-sm font-medium rounded-md text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 dark:focus:ring-offset-gray-800 transition-colors duration-200"
       >
         Cancel
       </button>
@@ -109,7 +109,7 @@ const resetForm = () => {
 };
 
 const handleSubmit = () => {
-  emit('submit', { ...form.value });
+  emit('submit', form.value);
   if (!props.expense) {
     resetForm();
   }
