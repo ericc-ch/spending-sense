@@ -2,6 +2,19 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxtjs/tailwindcss'],
+  app: {
+    head: {
+      title: 'SpendingSense - Personal Finance Tracker',
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { name: 'description', content: 'Track your personal expenses and manage your budget effectively' }
+      ]
+    },
+    baseURL: '/spending-sense/', // Replace with your repository name
+    buildAssetsDir: 'assets'
+  },
+  ssr: false, // Disable SSR for GitHub Pages
   tailwindcss: {
     config: {
       darkMode: 'class',
@@ -23,16 +36,6 @@ export default defineNuxtConfig({
           }
         }
       }
-    }
-  },
-  app: {
-    head: {
-      title: 'SpendingSense - Personal Finance Tracker',
-      meta: [
-        { charset: 'utf-8' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'description', content: 'Track your personal expenses and manage your budget effectively' }
-      ]
     }
   },
   css: ['~/assets/css/main.css']
