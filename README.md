@@ -12,19 +12,19 @@ SpendingSense is a modern, user-friendly personal finance tracking application b
 
 - **Visual Analytics**
   - Pie charts showing expense distribution by category
-  - Bar graphs for monthly spending trends
+  - Line charts for monthly spending trends
   - Interactive data visualization
 
 - **Budget Management**
-  - Set monthly budget limits by category
-  - Receive alerts when approaching budget limits
-  - Track remaining budget in real-time
+  - (Planned) Set monthly budget limits by category
+  - (Planned) Receive alerts when approaching budget limits
+  - (Planned) Track remaining budget in real-time
 
 ### Technical Features
 - **Data Privacy & Security**
   - All data stored locally in browser storage
   - No external server dependencies
-  - Optional data export/backup functionality
+  - (Planned) Optional data export/backup functionality
 
 - **Modern UI/UX**
   - Responsive design for all devices
@@ -38,79 +38,17 @@ SpendingSense is a modern, user-friendly personal finance tracking application b
 
 ## Technical Stack
 - **Frontend**: Nuxt.js 3
-- **UI Framework**: (TBD - Tailwind CSS/Vuetify)
+- **UI Framework**: Tailwind CSS
 - **State Management**: Nuxt State Management
 - **Data Storage**: Browser LocalStorage/IndexedDB
-- **Charts**: (TBD - Chart.js/D3.js)
+- **Charts**: Chart.js
 
-## Setup
+## Development Setup
+- Ensure Bun is installed for package management
+- Use `bun run dev` to start the development server
 
-Make sure to install dependencies:
+## Contributing
+- Contributions are welcome! Please fork the repository and submit a pull request.
 
-```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## License
+- This project is licensed under the MIT License.

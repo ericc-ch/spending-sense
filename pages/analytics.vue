@@ -38,6 +38,8 @@
           </div>
         </div>
       </div>
+      
+      <BudgetManager :expenses="expenses" />
     </div>
   </div>
 </template>
@@ -46,6 +48,7 @@
 import { ref, computed } from 'vue'
 import type { Expense } from '~/types/expense'
 import { useExpenses } from '~/composables/useExpenses'
+import BudgetManager from '~/components/BudgetManager.vue'
 
 const timeRange = ref('30')
 const { expenses } = useExpenses()
